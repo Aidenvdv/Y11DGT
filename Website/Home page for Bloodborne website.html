@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloodborne lore</title>
+</head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            
+            background: #000;
+        }
+        
+        /* Fog Container */
+        .fog-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            pointer-events: none;
+            filter: blur(1px) grayscale(0.2) saturate(1.2) sepia(0.2);
+        }
+        
+        /* Fog Layers */
+        .fog-layer {
+            position: absolute;
+            height: 100%;
+            width: 300%;
+            background-repeat: repeat-x;
+            background-size: auto 100%;
+        }
+        
+        /* Layer 1 */
+        #fog-layer-1 {
+            background-image: url('https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog1.png');
+            animation: 
+                fog-move 45s linear infinite,
+                fog-opacity-1 12s ease-in-out infinite;
+        }
+        
+        /* Layer 2 */
+        #fog-layer-2 {
+            background-image: url('https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog2.png');
+            animation: 
+                fog-move 60s linear infinite,
+                fog-opacity-2 18s ease-in-out infinite;
+            opacity: 0.7;
+        }
+        
+        /* Layer 3 */
+        #fog-layer-3 {
+            background-image: url('https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog1.png');
+            animation: 
+                fog-move 75s linear infinite,
+                fog-opacity-3 24s ease-in-out infinite;
+            opacity: 0.5;
+        }
+        
+        /* Animations */
+        @keyframes fog-move {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-66.66%); }
+        }
+        
+        @keyframes fog-opacity-1 {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.7; }
+        }
+        
+        @keyframes fog-opacity-2 {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 0.9; }
+        }
+        
+        @keyframes fog-opacity-3 {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 0.6; }
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+            p.a {
+                text-align: left;
+            }
+            
+            body{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            
+            }
+            .fog-container {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                z-index: -1; /* Ensure it stays behind content */
+              }
+            .sidebar{
+                border: #062c663b 5px;
+                width: 250px;
+                align-items: right;
+                display: flex;
+                padding: 13px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                margin: 10px;
+                    }
+            .bi{
+                padding:30px;
+                align-self: center;
+                background-color:#7f000061 ;
+                background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(177, 150, 150, 0.322));
+                text-align: left;
+            }
+            .hunters_dream{ 
+                align-items: right;
+                display: block;
+                padding: 13px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+            }
+            nav{
+                text-align: left;
+            }
+            a:link, a:visited {
+                grid-area: conentTitle;
+                background-color: #062c663b;
+                color: white;
+            
+            }
+            a:hover {
+                text-decoration: underline;
+                background-color: #062c6628;
+            } 
+            .button {
+                background-color: #062d66;
+                padding: 15px 30px;
+                border-radius: 4px;
+                display:inline-block
+                
+            }
+            .nothx{
+                padding: none;
+            }
+            .grid{
+                display:grid;
+                grid-template-columns: 1fr 6f   3fr;
+                grid-template-rows: auto;
+                grid-template-areas: 
+                "space contentTitle space1"
+                "space2 contentMain side";
+                display: flex;
+            }
+            .contentTitle{
+                grid-area: contentTitle;
+                text-align:center;
+                background-repeat: no-repeat;
+                height:120px;
+                padding: 0px;
+            
+            }
+            
+            .contentMain {
+                grid-area: contentMain;
+                margin:15px;
+                height: 950px;
+                width: 600px;
+                text-align: right;
+                align-items: right;
+                align-self: center;
+            
+                
+                
+            }
+            
+            .space {
+                border: #062d66 115px;
+                grid-area: space;
+                background-color: #062d66;
+            }
+            .space1 {
+                border: #062d66 115px;
+                grid-area: space;
+                background-color:#062d66;
+            }
+    </style>
+    <body>
+        <div class="fog-container">
+            <div id="fog-layer-1" class="fog-layer"></div>
+            <div id="fog-layer-2" class="fog-layer"></div>
+            <div id="fog-layer-3" class="fog-layer"></div>
+        </div>
+
+            <div class="grid">
+                <div class="contentTitle">
+                    <p style="color:white;font-size:300%">Bloodborne</p>
+                    <nav>
+                        <button class="button" >
+                            <a href="http://127.0.0.1:3000/Home page for Bloodborne website.html">Home</a>
+                        </button>
+                        <button class="button">
+                            <a href="http://127.0.0.1:3000/Storyline.html">storyline</a>
+                        </button>
+                        <button class="button">
+                            <a href="http://127.0.0.1:3000/index.html">specifics</a>
+                        </button>
+                        
+                    </nav>
+                    <div class="space">
+                    <div class="space1">
+                    </div>   
+                    <div class="space2">
+
+                    </div>
+
+        </div>
+            <div class="grid">
+                <div class="contentMain">
+                    <img src="https://m.media-amazon.com/images/M/MV5BY2EzZGMxZTMtNDcxYS00MjhmLTg1ZjAtYzEzNmM1NzUzYzA3XkEyXkFqcGc@._V1_.jpg" class="bi"style= "height: 850px" >
+                    <p class="a" style="color:white">Bloodborne is a game released in 24 march 2015, and is a game heavily inspired by the lovecraftian Horror
+                        written by american author howard philip Lovecraft. Bloodborne was released by from software game studios 
+                        who have also previously released other games including demon souls, and the first 2 dark souls games as 
+                        as well as other games but these are the most relevant. Bloodborne is well known for its dificulty and well written story (which I will be covering in these websites)
+                        . Bloodborne does not make it easy to piece a story together, as it does not tell you outright what is going on, so players have to piece together a story alone going on context clues, and item descriptions such as the one below</p>
+                        <img src="https://static1.thegamerimages.com/wordpress/wp-content/uploads/2024/04/bloodborne-one-third-of-umbilical-cord-consumable.jpg" alt="item description of umbilical cord" style="height:355px ">
+                        <p style="color:white">this might seem like a small amount of information, which it is but when combinesd context clues and gameplay</p>
+                    </div>
+                        <div class="sidebar">
+                            <a href="http://127.0.0.1:3000/Home page for Bloodborne website.html"><img src="https://philosophyandvideogamesblog.wordpress.com/wp-content/uploads/2017/04/maxresdefault.jpg?w=1200&h=800&crop=1" class="hunters_dream" style="height: 150px; width:250px"></a>
+                            <a href="http://127.0.0.1:3000/Storyline.html"> <img src="https://static.wikia.nocookie.net/bloodborne/images/3/37/0wDg2lE.png/revision/latest?cb=20180314050458" class="hunters_dream" style="height: 150px; width:250px">
+                            </a>
+                            <a href="http://127.0.0.1:3000/index.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh4WDkgS6hRUIgg0bGLjILSeMdLsp3Lw8k-Gxzbr-spH34j1URck1xGyPCfxHGp21ODYNlpCJ1FYQKnHiEELmD104OCvCxPa8LzwWHEAPjIjCF4cntX02OfJSi298-lj2rOoLM1c8oiBt7g/s1600/Bloodborne%25E2%2584%25A2_20190302135722.png" class="hunters_dream" style="height:150px; width:250px"></a>
+                    </div>
+            </div>
+        </div>
+        <footer>
+            <p>Contact me: <a href="mailto:aiden.vandervyver@kingsway.school.nz"></a> <a>aiden.vandervyver@kingsway.school.nz</a></p>
+            <p>&copy; 2025 Bloodborne sites. All rights reserved.</p>
+        </footer>
+    
+</body>

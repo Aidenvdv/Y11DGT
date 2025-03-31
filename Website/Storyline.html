@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloodborne lore</title>
+</head>
+    <style>
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+          
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            
+            background: #000;
+        }
+        
+        /* Fog Container */
+        .fog-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            pointer-events: none;
+            filter: blur(1px) grayscale(0.2) saturate(1.2) sepia(0.2);
+        }
+        
+        /* Fog Layers */
+        .fog-layer {
+            position: absolute;
+            height: 100%;
+            width: 300%;
+            background-repeat: repeat-x;
+            background-size: auto 100%;
+        }
+        
+        /* Layer 1 */
+        #fog-layer-1 {
+            background-image: url('https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog1.png');
+            animation: 
+                fog-move 45s linear infinite,
+                fog-opacity-1 12s ease-in-out infinite;
+        }
+        
+        /* Layer 2 */
+        #fog-layer-2 {
+            background-image: url('https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog2.png');
+            animation: 
+                fog-move 60s linear infinite,
+                fog-opacity-2 18s ease-in-out infinite;
+            opacity: 0.7;
+        }
+        
+        /* Layer 3 */
+        #fog-layer-3 {
+            background-image: url('https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog1.png');
+            animation: 
+                fog-move 75s linear infinite,
+                fog-opacity-3 24s ease-in-out infinite;
+            opacity: 0.5;
+        }
+        
+        /* Animations */
+        @keyframes fog-move {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-66.66%); }
+        }
+        
+        @keyframes fog-opacity-1 {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.7; }
+        }
+        
+        @keyframes fog-opacity-2 {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 0.9; }
+        }
+        
+        @keyframes fog-opacity-3 {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 0.6; }
+        }
+            
+        
+            p.a {
+                text-align: left;
+            }
+            
+            body{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            
+            }
+            .fog-container {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                z-index: -1; /* Ensure it stays behind content */
+              }
+            .sidebar{
+                border: #062c663b 5px;
+                width: 250px;
+                align-items: right;
+                display: flex;
+                padding: 13px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                margin: 10px;
+                    }
+            .bi{
+                padding:30px;
+                align-self: center;
+                background-color:#7f000061 ;
+                background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(177, 150, 150, 0.322));
+                text-align: left;
+            }
+            .hunters_dream{ 
+                align-items: right;
+                display: block;
+                padding: 13px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+            }
+            nav{
+                text-align: left;
+            }
+            a:link, a:visited {
+                grid-area: conentTitle;
+                background-color: #062c663b;
+                color: white;
+            
+            }
+            a:hover {
+                text-decoration: underline;
+                background-color: #062c6628;
+            } 
+            .button {
+                background-color: #062d66;
+                padding: 15px 30px;
+                border-radius: 4px;
+                display:inline-block
+                
+            }
+            .nothx{
+                padding: none;
+            }
+            .grid{
+                display:grid;
+                grid-template-columns: 1fr 6f   3fr;
+                grid-template-rows: auto;
+                grid-template-areas: 
+                "space contentTitle space1"
+                "space2 contentMain side";
+                display: flex;
+            }
+            .contentTitle{
+                grid-area: contentTitle;
+                text-align:center;
+                background-repeat: no-repeat;
+                height:120px;
+                padding: 0px;
+            
+            }
+            
+            .contentMain {
+                grid-area: contentMain;
+                margin:15px;
+                height: 950px;
+                width: 600px;
+                text-align: center;
+                align-items: right;
+                align-self: center;
+            
+                
+                
+            }
+            
+            .space {
+                border: #062d66 115px;
+                grid-area: space;
+                background-color: #062d66;
+            }
+            .space1 {
+                border: #062d66 115px;
+                grid-area: space;
+                background-color:#062d66;
+            }
+    </style>
+    <body>
+        <div class="fog-container">
+            <div id="fog-layer-1" class="fog-layer"></div>
+            <div id="fog-layer-2" class="fog-layer"></div>
+            <div id="fog-layer-3" class="fog-layer"></div>
+        </div>
+
+            <div class="grid">
+                <div class="contentTitle">
+                    <p style="color:white;font-size:300%">storyline</p>
+                    <nav>
+                        <button class="button" >
+                            <a href="http://127.0.0.1:3000/Home page for Bloodborne website.html">Home</a>
+                        </button>
+                        <button class="button">
+                            <a href="http://127.0.0.1:3000/Storyline.html">storyline</a>
+                        </button>
+                        <button class="button">
+                            <a href="http://127.0.0.1:3000/index.html">specifics</a>
+                        </button>
+                        
+                    </nav>
+                    <div class="space">
+                    <div class="space1">
+                    </div>   
+                    <div class="space2">
+
+                    </div>
+
+        </div>
+            <div class="grid">
+                <div class="contentMain">
+                    <p style="color:white;">The Origins The Great Ones and the Old Blood
+                        Long before the events of Bloodborne, ancient, cosmic beings known
+                         as the Great Ones existed beyond human understanding. They were godlike
+                          entities capable of manipulating reality, granting boons, and influencing 
+                          mortals in ways that often led to madness. One such Great One, Ebrietas, Daughter of the Cosmos,
+                        s, and others of her kind, were discovered in the depths of ancient Pthumerian tombs
+                         beneath Yharnam. The Pthumerians, an ancient race, were once chosen by the Great Ones to serve as their keepers, and they delved into the arcane mysteries of the cosmos. However, their experiments with the Great Ones led to their downfall, as exposure to their eldritch power transformed them into monstrous beings.
+                        
+                        Millennia later, scholars of the Byrgenwerth Academy, led by Master Willem, unearthed the secrets of the Pthumerians. They discovered the "Old Blood," a substance linked to the Great Ones, capable of granting superhuman abilities but also leading to horrific mutations and madness.
+                        
+                        The Schism – Byrgenwerth and the Healing Church
+                        Master Willem, wary of the dangers of the Old Blood, cautioned against its use. He believed that "eyes on the inside"—insight and knowledge—were the key to true ascension, not blood. However, his student, Laurence, saw potential in the blood’s transformative power and founded the Healing Church, a religious organization that used the Old Blood to heal the sick.
+                        
+                        Under Laurence's leadership, the Healing Church spread across Yharnam, offering miraculous cures and blood ministrations, which made the city prosperous. However, unbeknownst to the people, this blood carried the taint of the Great Ones, and repeated use led to bestial transformations.
+                        
+                        Meanwhile, Willem and Byrgenwerth continued their pursuit of cosmic enlightenment. They sought communion with the Great Ones, leading to the discovery of the Moon Presence, a powerful entity linked to the Hunter's Dream.
+                        
+                        The Rise and Fall of Yharnam
+                        As the Healing Church's influence grew, it established several sects:
+                        
+                        The School of Mensis, led by Micolash, sought direct communion with the Great Ones.
+                        
+                        The Choir, an elite branch of scholars, worshipped Ebrietas and pursued celestial ascension.
+                        
+                        The Church Hunters, including Ludwig, were formed to combat the rising plague of beasts.
+                        
+                        Despite their efforts, the Beastly Scourge spread across Yharnam. Those who received too much Old Blood eventually lost themselves, turning into monstrous creatures. The Healing Church suppressed knowledge of the plague and ordered the Hunters, warriors trained to slay beasts, to eliminate those afflicted.
+                        
+                        One of the most notorious hunters was Gehrman, the First Hunter. He was eventually ensnared by the Moon Presence and trapped in the Hunter’s Dream, a supernatural realm where hunters were resurrected to continue the eternal hunt.
+                        
+                        The Night of the Hunt – Bloodborne’s Present
+                        The game begins on the Night of the Hunt, a recurring event where beasts run rampant, and hunters roam the streets to cleanse the city. The player takes on the role of a Hunter, undergoing a blood transfusion from a mysterious figure. Shortly after, they awaken in Yharnam, where the streets are filled with maddened townsfolk and horrific beasts.
+                        
+                        As the Hunter progresses, they uncover the secrets of the Healing Church, Byrgenwerth, and the Great Ones. They learn that:
+                        
+                        The School of Mensis, in their attempt to contact a Great One, accidentally called upon Mergo, an infant Great One, whose stillborn cries trapped Yharnam in an endless nightmare.
+                        
+                        The Hunter must ascend beyond the Hunt, either by ending the Nightmare, rejecting the Dream, or embracing the full truth of the cosmos.
+                        
+                        The Endings – The Hunter’s Fate
+                        Bloodborne has multiple endings, depending on the choices the Hunter makes:
+                        
+                        Yharnam Sunrise – The Hunter accepts Gehrman’s offer to leave the Hunter’s Dream, waking up in Yharnam as if the Hunt was a mere dream.
+                        
+                        Honoring Wishes – The Hunter refuses Gehrman’s offer, fights him, and replaces him as the new caretaker of the Hunter’s Dream, continuing the endless cycle.
+                        
+                        Childhood’s Beginning – If the Hunter gains enough Insight and consumes three Third Umbilical Cords, they reject the Moon Presence’s control, defeat it, and transcend humanity, becoming a new Great One.</p>
+               
+            </div>
+            <div class="sidebar">
+                <a href="http://127.0.0.1:3000/Home page for Bloodborne website.html"><img src="https://philosophyandvideogamesblog.wordpress.com/wp-content/uploads/2017/04/maxresdefault.jpg?w=1200&h=800&crop=1" class="hunters_dream" style="height: 150px; width:250px"></a>
+                <a href="http://127.0.0.1:3000/Storyline.html"> <img src="https://static.wikia.nocookie.net/bloodborne/images/3/37/0wDg2lE.png/revision/latest?cb=20180314050458" class="hunters_dream" style="height: 150px; width:250px">
+                </a>
+                <a href="http://127.0.0.1:3000/index.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh4WDkgS6hRUIgg0bGLjILSeMdLsp3Lw8k-Gxzbr-spH34j1URck1xGyPCfxHGp21ODYNlpCJ1FYQKnHiEELmD104OCvCxPa8LzwWHEAPjIjCF4cntX02OfJSi298-lj2rOoLM1c8oiBt7g/s1600/Bloodborne%25E2%2584%25A2_20190302135722.png" class="hunters_dream" style="height:150px; width:250px"></a>
+        </div>
+      
+        <footer>
+            <p>Contact me: <a href="mailto:aiden.vandervyver@kingsway.school.nz"></a> <a>aiden.vandervyver@kingsway.school.nz</a></p>
+            <p>&copy; 2025 Bloodborne sites. All rights reserved.</p>
+        </footer>
+    
+</body> 

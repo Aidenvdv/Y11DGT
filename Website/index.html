@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloodborne lore</title>
+</head>
+    <style>
+        .box {
+            width: 400px;
+            height: 400px;
+            text-align: center;
+             background-color: rgba(31, 31, 31, 0.7);
+            grid-area: contentMain;
+            padding: 100px;
+            margin: 50px;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            
+            background: #000;
+        }
+        
+        /* Fog Container */
+        .fog-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            pointer-events: none;
+            filter: blur(1px) grayscale(0.2) saturate(1.2) sepia(0.2);
+        }
+        
+        /* Fog Layers */
+        .fog-layer {
+            position: absolute;
+            height: 100%;
+            width: 300%;
+            background-repeat: repeat-x;
+            background-size: auto 100%;
+        }
+        
+        /* Layer 1 */
+        #fog-layer-1 {
+            background-image: url('https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog1.png');
+            animation: 
+                fog-move 45s linear infinite,
+                fog-opacity-1 12s ease-in-out infinite;
+        }
+        
+        /* Layer 2 */
+        #fog-layer-2 {
+            background-image: url('https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog2.png');
+            animation: 
+                fog-move 60s linear infinite,
+                fog-opacity-2 18s ease-in-out infinite;
+            opacity: 0.7;
+        }
+        
+        /* Layer 3 */
+        #fog-layer-3 {
+            background-image: url('https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog1.png');
+            animation: 
+                fog-move 75s linear infinite,
+                fog-opacity-3 24s ease-in-out infinite;
+            opacity: 0.5;
+        }
+        
+        /* Animations */
+        @keyframes fog-move {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-66.66%); }
+        }
+        
+        @keyframes fog-opacity-1 {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.7; }
+        }
+        
+        @keyframes fog-opacity-2 {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 0.9; }
+        }
+        
+        @keyframes fog-opacity-3 {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 0.6; }
+        }
+            
+        
+            p.a {
+                text-align: left;
+            }
+            
+            body{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            
+            }
+            .fog-container {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                z-index: -1; /* Ensure it stays behind content */
+              }
+            .sidebar{
+                transform: translateY(-50%);
+                right: 20px;
+            top: 50%;
+                border: #062c663b 5px;
+                width: 250px;
+                align-items: right;
+                display: flex;
+                padding: 13px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                margin: 10px;
+                position: fixed;
+                    }
+            .bi{
+                padding:30px;
+                align-self: center;
+                background-color:#7f000061 ;
+                background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(177, 150, 150, 0.322));
+                text-align: left;
+            }
+            .hunters_dream{ 
+                align-items: right;
+                display: block;
+                padding: 13px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+            }
+            nav{
+                text-align: left;
+            }
+            a:link, a:visited {
+                grid-area: conentTitle;
+                background-color: #062c663b;
+                color: white;
+            
+            }
+            footer {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 20px;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            
+            }
+    
+            footer a {
+                color: #fff;
+                text-decoration: none;
+            }
+    
+            footer a:hover {
+                text-decoration: underline;
+            }
+            a:hover {
+                text-decoration: underline;
+                background-color: #062c6628;
+            } 
+            .button {
+                background-color: #062d66;
+                padding: 15px 30px;
+                border-radius: 4px;
+                display:inline-block
+                
+            }
+            .nothx{
+                padding: none;
+            }
+            .grid{
+                display:grid;
+                grid-template-columns: 1fr 6f   3fr;
+                grid-template-rows: auto;
+                grid-template-areas: 
+                "space contentTitle space1"
+                "space2 contentMain side";
+                display: flex;
+            }
+            .contentTitle{
+                grid-area: contentTitle;
+                text-align:center;
+                background-repeat: no-repeat;
+                height:120px;
+                padding: 0px;
+            
+            }
+            
+            .contentMain {
+                grid-area: contentMain;
+                margin:15px;
+                height: 950px;
+                width: 600px;
+                text-align: right;
+                align-items: right;
+                align-self: center;
+            
+                
+                
+            }
+            
+            .space {
+                border: #062d66 115px;
+                grid-area: space;
+                background-color: #062d66;
+            }
+            .space1 {
+                border: #062d66 115px;
+                grid-area: space;
+                background-color:#062d66;
+            }
+    </style>
+    <body>
+        <div class="fog-container">
+            <div id="fog-layer-1" class="fog-layer"></div>
+            <div id="fog-layer-2" class="fog-layer"></div>
+            <div id="fog-layer-3" class="fog-layer"></div>
+        </div>
+
+            <div class="grid">
+                <div class="contentTitle">
+                    <p style="color:white;font-size:300%">Bloodborne</p>
+                    <nav>
+                        <button class="button" >
+                            <a href="http://127.0.0.1:3000/Home page for Bloodborne website.html">Home</a>
+                        </button>
+                        <button class="button">
+                            <a href="http://127.0.0.1:3000/Storyline.html">storyline</a>
+                        </button>
+                        <button class="button">
+                            <a href="http://127.0.0.1:3000/index.html">specifics</a>
+                        </button>
+                        
+                    </nav>
+                    <div class="space">
+                    <div class="space1">
+                    </div>   
+                    <div class="space2">
+
+                    </div>
+
+        </div>
+            <div class="grid">
+                <div class="contentMain">
+                    <div class="box">
+                        <img src="https://static.wikia.nocookie.net/bloodborne/images/6/66/Image_bloodborne-25416-2994_0005c.jpg/revision/latest?cb=20150411155416" style="height:300px; width: 400px">
+                        <p style="color:white">The Cleric Beast is one of the most iconic and tragic creatures in Bloodborne, embodying the horrors of the Healing Church's misguided use of the Old Blood. Once a member of the Healing Church, the Cleric Beast was a victim of the church's experimentation with the blood, which transformed it into a monstrous, beast-like entity. As the Beast roams the streets of Yharnam, it represents the unintended consequences of the Healing Church's pursuit of salvation through the tainted blood. Its sorrowful appearance and ferocious nature highlight the twisted legacy of the Church's actions, and its encounter with the Hunter marks the beginning of a deeper unraveling of Yharnam's grim history.</p>
+                    </div>
+                          <!-- Father Gascoigne -->
+        <div class="box">
+            <img src="https://static.wikia.nocookie.net/bloodborne/images/3/3b/Father_Gascoigne.jpg/revision/latest?cb=20150605004206" style="height:300px; width: 400px">
+            <p style="color:white">Father Gascoigne, a former priest and hunter, succumbed to the beastly scourge that plagues Yharnam. Once a hunter of beasts himself, Gascoigne's tragic story reflects the inevitable fate of those who hunt monsters for too long. His transformation into a beast highlights the thin line between hunter and hunted in Yharnam's endless night of the hunt.</p>
+        </div>
+
+        <!-- Vicar Amelia -->
+        <div class="box">
+            <img src="https://static.wikia.nocookie.net/bloodborne/images/1/1e/Vicar_Amelia.png/revision/latest?cb=20150411155416" style="height:300px; width: 400px">
+            <p style="color:white">Vicar Amelia, the high-ranking clergywoman of the Healing Church, represents the corruption at the heart of Yharnam's religious institutions. Clutching her golden pendant and praying even as she transforms into a horrific beast, Amelia symbolizes the failure of the Church's attempts to use the Old Blood for divine purposes.</p>
+        </div>
+
+        <!-- The Witch of Hemwick -->
+        <div class="box">
+            <img src="https://static.wikia.nocookie.net/bloodborne/images/4/4e/Witch_of_Hemwick.jpg/revision/latest?cb=20150411155416" style="height:300px; width: 400px">
+            <p style="color:white">The Witches of Hemwick are practitioners of forbidden arts who harvest eyes from their victims in a twisted attempt to gain Insight. Their grotesque methods reflect one of Bloodborne's central themes - the dangerous pursuit of knowledge and the physical manifestations of such forbidden understanding.</p>
+        </div>
+
+        <!-- Shadow of Yharnam -->
+        <div class="box">
+            <img src="https://static.wikia.nocookie.net/bloodborne/images/2/2e/Shadow_of_Yharnam.jpg/revision/latest?cb=20150411155416" style="height:300px; width: 400px">
+            <p style="color:white">These mysterious figures serve as guardians of Byrgenwerth and the forbidden secrets within. Their connection to Queen Yharnam suggests they may be remnants of the ancient Pthumerian civilization, protecting the truth about the Great Ones and the source of the Old Blood.</p>
+        </div>
+
+        <!-- Rom, the Vacuous Spider -->
+        <div class="box">
+            <img src="https://static.wikia.nocookie.net/bloodborne/images/5/5b/Rom_the_Vacuous_Spider.png/revision/latest?cb=20150411155416" style="height:300px; width: 400px">
+            <p style="color:white">Rom represents one of the few successful attempts at ascension, though at terrible cost. Once a scholar at Byrgenwerth, Rom was transformed into a Kin of the Cosmos, her very existence maintaining the illusion that hides the horrific truth of Yharnam's reality from its inhabitants.</p>
+        </div>
+
+        <!-- The One Reborn -->
+        <div class="box">
+            <img src="https://static.wikia.nocookie.net/bloodborne/images/4/4a/The_One_Reborn.jpg/revision/latest?cb=20150411155416" style="height:300px; width: 400px">
+            <p style="color:white">This grotesque amalgamation of corpses represents the School of Mensis's horrific ritual to contact the Great Ones. Created from the remains of countless victims, The One Reborn symbolizes the ultimate perversion of the Healing Church's experiments with the Old Blood.</p>
+        </div>
+
+        <!-- Micolash, Host of the Nightmare -->
+        <div class="box">
+            <img src="https://static.wikia.nocookie.net/bloodborne/images/5/5c/Micolash.png/revision/latest?cb=20150411155416" style="height:300px; width: 400px">
+            <p style="color:white">The mad scholar Micolash represents the dangers of pursuing forbidden knowledge without wisdom. Trapped in the Nightmare of Mensis, he continues his insane ramblings about the Great Ones, having sacrificed his humanity in the pursuit of cosmic understanding.</p>
+        </div>
+
+        <!-- Mergo's Wet Nurse -->
+        <div class="box">
+            <img src="https://static.wikia.nocookie.net/bloodborne/images/3/3c/Mergo%27s_Wet_Nurse.jpg/revision/latest?cb=20150411155416" style="height:300px; width: 400px">
+            <p style="color:white">This spectral guardian watches over Mergo, the infant Great One. Its presence suggests that even the cosmic entities of Bloodborne have their own hierarchies and systems of protection, while also representing the final obstacle to ending the Nightmare.</p>
+        </div>
+
+        <!-- Gehrman, The First Hunter -->
+        <div class="box">
+            <img src="https://static.wikia.nocookie.net/bloodborne/images/4/4e/Gehrman_the_First_Hunter.jpg/revision/latest?cb=20150411155416" style="height:300px; width: 400px">
+            <p style="color:white">The tragic figure of Gehrman represents the endless cycle of the hunt. Trapped in the Hunter's Dream as the Moon Presence's surrogate, he offers hunters release from the nightmare, even as he remains eternally bound to it himself.</p>
+        </div>
+
+        <!-- Moon Presence -->
+        <div class="box">
+            <img src="https://static.wikia.nocookie.net/bloodborne/images/9/9f/Moon_Presence.jpg/revision/latest?cb=20150411155416" style="height:300px; width: 400px">
+            <p style="color:white">The true master of the Hunter's Dream and final Great One encountered in Bloodborne. Its pale, skeletal form suggests a being of pure cosmic will, manipulating events in Yharnam for purposes beyond human comprehension.</p>
+        </div>
+    </div>
+                    </div>
+                    <div class="grid">
+                        <div class="sidebar">
+                            <a href="http://127.0.0.1:3000/Home page for Bloodborne website.html"><img src="https://philosophyandvideogamesblog.wordpress.com/wp-content/uploads/2017/04/maxresdefault.jpg?w=1200&h=800&crop=1" class="hunters_dream" style="height: 150px; width:250px"></a>
+                            <a href="http://127.0.0.1:3000/Storyline.html"> <img src="https://static.wikia.nocookie.net/bloodborne/images/3/37/0wDg2lE.png/revision/latest?cb=20180314050458" class="hunters_dream" style="height: 150px; width:250px">
+                            </a>
+                            <a href="http://127.0.0.1:3000/index.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh4WDkgS6hRUIgg0bGLjILSeMdLsp3Lw8k-Gxzbr-spH34j1URck1xGyPCfxHGp21ODYNlpCJ1FYQKnHiEELmD104OCvCxPa8LzwWHEAPjIjCF4cntX02OfJSi298-lj2rOoLM1c8oiBt7g/s1600/Bloodborne%25E2%2584%25A2_20190302135722.png" class="hunters_dream" style="height:150px; width:250px"></a>
+                    </div>
+                    </div>
+            </div>
+        </div>
+        <footer>
+            <p>Contact me: <a href="mailto:aiden.vandervyver@kingsway.school.nz"></a> <a>aiden.vandervyver@kingsway.school.nz</a></p>
+            <p>&copy; 2025 Bloodborne sites. All rights reserved.</p>
+        </footer>
+    
+</body>
