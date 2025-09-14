@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"equip",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"equip",
+  "parent":{
+    "name":"Sequences",
+    "path":"folders/Sequences.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

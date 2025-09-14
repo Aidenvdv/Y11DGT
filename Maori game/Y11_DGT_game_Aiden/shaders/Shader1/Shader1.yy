@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"Shader1",
+  "name":"Shader1",
+  "parent":{
+    "name":"Y11_DGT_game_Aiden",
+    "path":"Y11_DGT_game_Aiden.yyp",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

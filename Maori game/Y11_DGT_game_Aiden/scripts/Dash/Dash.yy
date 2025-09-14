@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Dash",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Dash",
+  "parent":{
+    "name":"Sequences",
+    "path":"folders/Sequences.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

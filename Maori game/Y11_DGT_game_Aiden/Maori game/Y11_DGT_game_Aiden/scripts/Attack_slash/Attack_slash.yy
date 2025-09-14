@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Attack_slash",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Attack_slash",
+  "parent":{
+    "name":"Sequences",
+    "path":"folders/Sequences.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

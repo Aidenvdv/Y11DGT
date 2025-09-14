@@ -1,0 +1,1 @@
+draw_text_transformed(x, y, " you are about to enter the dark forest, if you go past here you will surely die (probably) but if you survive, you might get rewared, esc to exit", 100, 100, 0)

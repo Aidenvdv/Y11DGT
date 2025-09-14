@@ -1,0 +1,36 @@
+game_set_speed(60, fps);
+RDash = 0;
+Ccdash = 0;
+wd = 3;
+a = 0
+WDash = 1;
+Sdash = 0;
+cd = 0;
+Te = 0
+Adone = 0
+Hcool = 30;
+Ddam = 8;
+
+is_shield = 0
+taiaha = 0
+image_speed = 0;
+//xspd = 0;
+//yspd = 0;
+//walkspd = 0;
+//speedRoll = 7.0
+//disDash = 70;
+//grv = 0.2;
+Sprite_Dash = sDash;
+dam = 1;
+CDash = 0;
+max_CDash = 10
+is_dashing = 0;
+//WDash = 1;
+dash_duration = 0.3 * game_get_speed(gamespeed_fps);
+dash_cooldown = 10000 * game_get_speed(gamespeed_fps);
+hp = 14;
+max_hp = 14;
+damage = 1;
+Phit = 2 * game_get_speed(gamespeed_fps);
+hitted = 0;
+DDur = 30

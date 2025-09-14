@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"dialouge",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"dialouge",
+  "parent":{
+    "name":"Sequences",
+    "path":"folders/Sequences.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
